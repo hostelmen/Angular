@@ -1,0 +1,83 @@
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="income-tab" data-bs-toggle="tab" data-bs-target="#income" type="button" role="tab" aria-controls="income" aria-selected="true">Income</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="outcome-tab" data-bs-toggle="tab" data-bs-target="#outcome" type="button" role="tab" aria-controls="outcome" aria-selected="false">Outcome</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="loan-tab" data-bs-toggle="tab" data-bs-target="#loan" type="button" role="tab" aria-controls="loan" aria-selected="false">Loan</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="investment-tab" data-bs-toggle="tab" data-bs-target="#investment" type="button" role="tab" aria-controls="investment" aria-selected="false">Investment</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="income" role="tabpanel" aria-labelledby="income-tab">
+    <table class="table">
+      <tbody class="row justify-content-center">
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Name</td>
+        <td class="col-2 text-center">Acount</td>
+      </tr>
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Mark</td>
+        <td class="col-2 text-center">499</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="outcome" role="tabpanel" aria-labelledby="outcome-tab">
+    <table class="table">
+      <tbody class="row justify-content-center">
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Name</td>
+        <td class="col-2 text-center">Acount</td>
+      </tr>
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Mark</td>
+        <td class="col-2 text-center">499</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="loan" role="tabpanel" aria-labelledby="loan-tab">
+    <table class="table">
+      <tbody class="row justify-content-center">
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Name</td>
+        <td class="col-2 text-center">Acount</td>
+      </tr>
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Mark</td>
+        <td class="col-2 text-center">499</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="investment" role="tabpanel" aria-labelledby="investment-tab">
+    <table class="table">
+      <tbody class="row justify-content-center">
+      <tr class="row justify-content-center">
+        <td class="col-2 text-center">Name</td>
+        <td class="col-2 text-center">Acount</td>
+      </tr>
+      <tr class="row justify-content-center" *ngFor="let item of items">
+        <td class="col-2 text-center">{{item.firstName + ' ' + item.secondName}}</td>
+        <td class="col-2 text-center">{{item.acount}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  const triggerEl = document.querySelector('#myTab button[data-bs-target="#income"]');
+  bootstrap.Tab.getInstance(triggerEl).show()
+  const triggerEl = document.querySelector('#myTab button[data-bs-target="#outcome"]');
+  bootstrap.Tab.getInstance(triggerEl).show()
+  const triggerEl = document.querySelector('#myTab button[data-bs-target="#loan"]');
+  bootstrap.Tab.getInstance(triggerEl).show()
+  const triggerEl = document.querySelector('#myTab button[data-bs-target="#investment"]');
+  bootstrap.Tab.getInstance(triggerEl).show()
+</script>
